@@ -61,16 +61,124 @@ h6 {
 
 body {
   font-family: "Poppins", sans-serif; /* 400i, 700, 800i*/
+  background-color: var(--offwhite);
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
 }
 
 input {
   font-size: 2rem;
+  width: min(8rem, 20vw);
+  display: block;
+  cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+main {
+  width: min(600px, 100vw - 2rem);
+  margin-inline: auto;
+  background-color: var(--white);
+  border-radius: 5% 5% 30% 5%;
+  padding: 2rem;
+}
+
+label {
+  text-transform: uppercase;
+  color: var(--smokeygrey);
+  font-size: 0.9rem;
+}
+
+.birth {
+  display: flex;
+  gap: 2rem;
+}
+
+.birth input {
+  border-radius: 5px;
+  border: 1px solid var(--lightgrey);
+  padding-inline-start: 1rem;
+  padding-block: 0.5rem;
+  outline: none;
+  transition: all ease-in-out 200ms;
+  margin-block: 0.5rem;
+}
+
+.birth input:focus,
+.birth input:hover {
+  border: 1.5px solid var(--purple);
+}
+
+.btn--submit {
+  position: relative;
+  text-align: right;
+}
+
+.btn--submit::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  background-color: var(--lightgrey);
+  width: 98%;
+}
+
+@media screen and (width < 600px) {
+  .btn--submit {
+    text-align: center;
+  }
+}
+
+form button {
+  border: none;
+  margin-right: auto;
+  background-color: var(--purple);
+  border-radius: 50%;
+  padding: 1rem;
+  transform: scale(0.9);
+  transition: all ease-in 200ms;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--offblack);
+  transform: scale(1);
+}
+
+.result {
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  padding-block: 0.2rem;
+  line-height: 1;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.result span {
+  color: var(--purple);
 }
 
 .attribution {
+  padding-block-start: 1rem;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
+  transition: color ease-out 200ms;
   color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover {
+  color: var(--purple);
 }

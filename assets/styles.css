@@ -69,7 +69,8 @@ body {
 
 input {
   font-size: 2rem;
-  width: min(8rem, 20vw);
+  max-width: 8rem;
+  width: 100%;
   display: block;
   cursor: pointer;
 }
@@ -91,7 +92,7 @@ main {
   margin-inline: auto;
   background-color: var(--white);
   border-radius: 5% 5% 30% 5%;
-  padding: 2rem;
+  padding: clamp(1rem, 4vw, 2rem);
 }
 
 label {
@@ -138,6 +139,12 @@ label {
 @media screen and (width < 600px) {
   .btn--submit {
     text-align: center;
+  }
+  .birth {
+    gap: 1rem;
+  }
+  .birth input {
+    padding-inline-start: 0.5rem;
   }
 }
 

@@ -38,13 +38,16 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Laptop + bigger screens :-
+![](./assets/images/screenshotbigscrn.jpg)
 
+Mobile and slaller devices:-
+![](assets/images/screenshotsmallscrns.jpg)
 
 
 ### Links
 
-- Solution URL: [Github Link](https://your-solution-url.com)
+- Solution URL: [Github Link](https://github.com/issagoodlifeInc/age-calculator.git)
 - Live Site URL: [Netlify Link](https://your-live-site-url.com)
 
 ## My process
@@ -59,21 +62,21 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+Handling the styling of the submit button
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.btn--submit {
+  position: relative;
+  text-align: right;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+.btn--submit::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  background-color: var(--lightgrey);
+  width: 98%;
 }
 ```
 

@@ -93,6 +93,25 @@ const birthDay = new Date(
   const ageMonth = Math.floor((ageInSeconds % 31536000) / 2628000);
   const ageDay = Math.floor(((ageInSeconds % 31536000) % 2628000) / 86400);
 ```
+Animating the ages to the final values
+```js
+const animateAge = (element, endValue) => {
+      let interval = 2000;
+      let duration = Math.floor(interval / endValue);
+      let startValue = 0;
+      let counter = setInterval(() => {
+        if (startValue != endValue) {
+          startValue += 1;
+          element.textContent = `${startValue} `;
+        } else {
+          element.textContent = `${endValue} `;
+        }
+        if (startValue == endValue) {
+          clearInterval(counter);
+        }
+      }, duration);
+    };
+```
 
 
 ### Continued development

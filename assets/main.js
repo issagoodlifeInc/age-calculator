@@ -89,32 +89,32 @@ btnSubmit.addEventListener("click", (event) => {
   const spanMonths = document.querySelector(".months");
   const spanDays = document.querySelector(".days");
 
+  function animateAge(element, endValue) {
+    let interval = 2000;
+    let duration = Math.floor(interval / endValue);
+    let startValue = 0;
+    let counter = setInterval(() => {
+      if (startValue != endValue) {
+        startValue += 1;
+        element.textContent = `${startValue} `;
+      } else {
+        element.textContent = `${endValue} `;
+      }
+      if (startValue == endValue) {
+        clearInterval(counter);
+      }
+    }, duration);
+    console.log(startValue, endValue);
+  }
+
   if (isValid) {
-    const animateAge = (element, endValue) => {
-      let interval = 2000;
-      let duration = Math.floor(interval / endValue);
-      let startValue = 0;
-      let counter = setInterval(() => {
-        if (startValue != endValue) {
-          startValue += 1;
-          element.textContent = `${startValue} `;
-        } else {
-          element.textContent = `${endValue} `;
-        }
-        if (startValue == endValue) {
-          clearInterval(counter);
-        }
-      }, duration);
-      console.log(startValue, endValue);
-    };
+    // animateAge(spanYears, parseInt(ageYear));
+    // animateAge(spanMonths, parseInt(ageMonth));
+    // animateAge(spanDays, parseInt(ageDay));
 
-    animateAge(spanYears, parseInt(ageYear));
-    animateAge(spanMonths, parseInt(ageMonth));
-    animateAge(spanDays, parseInt(ageDay));
-
-    // spanMonths.textContent = `${ageMonth} `;
-    // spanYears.textContent = `${ageYear} `;
-    // spanDays.textContent = `${ageDay} `;
+    spanMonths.textContent = `${ageMonth} `;
+    spanYears.textContent = `${ageYear} `;
+    spanDays.textContent = `${ageDay} `;
   }
 
   //   const ageYear = currentYear - parseInt(inputYear.value);

@@ -105,11 +105,12 @@ btnSubmit.addEventListener("click", (event) => {
           clearInterval(counter);
         }
       }, duration);
+      console.log(startValue, endValue);
     };
 
-    animateAge(spanYears, ageYear);
-    animateAge(spanMonths, ageMonth);
-    animateAge(spanDays, ageDay);
+    animateAge(spanYears, parseInt(ageYear));
+    animateAge(spanMonths, parseInt(ageMonth));
+    animateAge(spanDays, parseInt(ageDay));
 
     // spanMonths.textContent = `${ageMonth} `;
     // spanYears.textContent = `${ageYear} `;

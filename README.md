@@ -79,6 +79,22 @@ Handling the styling of the submit button
   width: 98%;
 }
 ```
+Calculating users age from the current time and the birth day date 
+```js
+
+const birthDay = new Date(
+  `${inputYear.value}, ${inputMonth.value}, ${inputDay.value}`
+);
+//   Getting current age in seconds
+  const ageInSeconds =
+    Math.round(Date.now() / 1000) - birthDay.getTime() / 1000;
+
+// Calculating age in years / months / days
+  const ageYear = Math.floor(ageInSeconds / 31536000);
+  const ageMonth = Math.floor((ageInSeconds % 31536000) / 2628000);
+  const ageDay = Math.floor(((ageInSeconds % 31536000) % 2628000) / 86400);
+```
+
 
 ### Continued development
 

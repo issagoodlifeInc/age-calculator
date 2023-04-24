@@ -16,7 +16,6 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
     - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
   - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
 
 
 ## Overview
@@ -48,7 +47,7 @@ Mobile and slaller devices:-
 ### Links
 
 - Solution URL: [Github Link](https://github.com/issagoodlifeInc/age-calculator.git)
-- Live Site URL: [Netlify Link](https://your-live-site-url.com)
+- Live Site URL: [Netlify Link](https://get-age.netlify.app)
 
 ## My process
 
@@ -103,17 +102,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
+- [Stack Overflow](https://stackoverflow.com/questions/30679279/how-to-convert-seconds-into-year-month-days-hours-minutes-respectively) - How to calculate the age.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+- Frontend Mentor - [@leskim](https://www.frontendmentor.io/profile/leskim)
 

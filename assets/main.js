@@ -18,14 +18,18 @@ const birthDay = new Date(
   `${inputYear.value}, ${inputMonth.value}, ${inputDay.value}`
 );
 
+let isValid = true;
+
 const validateDay = () => {
   if (inputDay.value > 31) {
     errorDay.textContent = "Must be a valid day";
     inputDay.style.borderColor = "var(--lightred)";
+    isValid = false;
   }
   if (inputDay.value === "") {
     errorDay.textContent = "This field is required";
     inputDay.style.borderColor = "var(--lightred)";
+    isValid = false;
   }
   if (
     (inputMonthValue === 2 ||
@@ -37,26 +41,31 @@ const validateDay = () => {
   ) {
     errorDay.textContent = "Must be a valid day";
     inputDay.style.borderColor = "var(--lightred)";
+    isValid = false;
   }
 };
 const validateMonth = () => {
   if (inputMonthValue > 12) {
     errorMonth.textContent = "Must be a valid month";
     inputMonth.style.borderColor = "var(--lightred)";
+    isValid = false;
   }
   if (inputMonth.value === "") {
     errorMonth.textContent = "This field is required";
     inputMonth.style.borderColor = "var(--lightred)";
+    isValid = false;
   }
 };
 const validateYear = () => {
   if (inputYear.value > currentDate.getFullYear()) {
     errorYear.textContent = "Must be in the past";
     inputYear.style.borderColor = "var(--lightred)";
+    isValid = false;
   }
   if (inputYear.value === "") {
     errorYear.textContent = "This field is required";
     inputYear.style.borderColor = "var(--lightred)";
+    isValid = false;
   }
 };
 
@@ -76,6 +85,16 @@ btnSubmit.addEventListener("click", (event) => {
   const ageMonth = Math.floor((ageInSeconds % 31536000) / 2628000);
   const ageDay = Math.floor(((ageInSeconds % 31536000) % 2628000) / 86400);
 
+  const spanYears = document.querySelector(".years");
+  const spanMonths = document.querySelector(".months");
+  const spanDays = document.querySelector(".days");
+
+  if (isValid) {
+    spanMonths.textContent = ageMonth;
+    spanYears.textContent = ageYear;
+    spanDays.textContent = ageDay;
+  }
+
   //   const ageYear = currentYear - parseInt(inputYear.value);
   //   const ageMonth = 12 - inputMonthValue;
 
@@ -92,6 +111,4 @@ btnSubmit.addEventListener("click", (event) => {
   //   } else if (inputMonthValue === 2 && inputYear % 2 != 0) {
   //     ageDay = 28 - inputDay.value;
   //   }
-
-  console.log(ageYear, ageMonth, ageDay);
 });
